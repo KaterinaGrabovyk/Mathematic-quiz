@@ -1,7 +1,6 @@
 var buttons=$(".buttons>button");
 var exs=$(".excercises>div");
 
-
 function plus(){
 var one=Math.floor(Math.random()*100)+1;
 var two=Math.floor(Math.random()*100)+1;
@@ -11,7 +10,7 @@ $(".plus .excample>p").text(one+" + "+two+" = ");
         $(".plus input").removeClass("textColAfter");
     })
     $(".plus button").click(function(){
-    var val=parseInt(document.getElementById("plus").value);
+    var val=parseInt(document.getElementById("plu").value);
     var add=".plus ";
     var oper=" + ";
     CalcRes(val,add,oper,one,two,res,plus);})
@@ -29,7 +28,7 @@ function minus(){
         $(".minus input").removeClass("textColAfter");
     })
     $(".minus button").click(function(){
-        var val=parseInt(document.getElementById("minus").value);
+        var val=parseInt(document.getElementById("minu").value);
         var add=".minus ";
         var oper=" - ";
         CalcRes(val,add,oper,one,two,res,minus);
@@ -77,41 +76,55 @@ function divide(){
 }
 
 function CalcRes(e, pl,op,one,two,res,funk){
-    var dones=$(pl+".done p");
+    var hei = document.querySelector("div"+pl);
     var a=one+op+two+" = "+res;
     if(e===res){
         console.log("right");
         $(pl+".excample>h3").text("Congratulation!");
+        $(pl+".excample>h3").css("color","#cb7403");
         $(pl+".excample>p").text("");
-        e=0;
+        $(pl+"input").addClass("textColAfter");
+        $(pl+".excample>input").hide();
+        $(pl+".excample>button").hide();
         setTimeout(function(){
+            $(pl+".excample>input").show();
+            $(pl+".excample>button").show();
             $(pl+".done div").prepend('<p>'+a+'</p>');
-            $(pl+".excample>h3").text("№"+(dones.length+2)+".");
-            $(pl+"input").addClass("textColAfter");
-            var hei = document.querySelector("div"+pl);
-            var height = hei.offsetHeight;
-            var newHeight = height + 100;
-             hei.setAttribute("height",newHeight+"px");
-             document.querySelector(".excercises").setAttribute("height",newHeight+"px");
-            funk();
+            $(pl+".excample>h3").text("");
+            height(hei);
+                funk();
+
         },3000);
         
     }else{
         console.log("wrong");
         $(pl+".excample>p").hide();
+        $(pl+".excample>input").hide();
+        $(pl+".excample>button").hide();
         $(pl+".excample>h3").text("Wrong! Try again");
+        $(pl+".excample>h3").css("color","red");
         setTimeout(function(){
             $(pl+".excample>p").show();
-            $(pl+".excample>h3").text("№"+(dones.length+2)+".");
+            $(pl+".excample>input").show();
+            $(pl+".excample>button").show();
+            $(pl+".excample>h3").text("");
         },2000);
         
     }
 }
 
+function height(hei){
+    var height = hei.offsetHeight+100;
+     hei.setAttribute("height",height); 
+}
 
+function afterClick(clas){
+ $("button").removeClass("afterClick");
+ $("button"+clas).addClass("afterClick");
+}
 function visibility(){
     buttons.click(function(){
-        var clas=this.getAttribute("class");
+        var clas=this.getAttribute("id");
         console.log(clas);
         for(var i=0;i<exs.length;i++){
             var Ex=exs[i].getAttribute("class");
@@ -119,10 +132,11 @@ function visibility(){
                 $(".excercises>div").css("visibility","hidden");
                 exs[i].setAttribute("style","visibility:visible");
                 switch(clas){
-                    case "plus": plus();break;
-                    case "minus": minus();break;
-                    case "multiply": multiply();break;
-                    case "divide": divide();break;
+                    case "about":afterClick(".about");break;
+                    case "plus":afterClick(".plus"), plus();break;
+                    case "minus": afterClick(".minus"),minus();break;
+                    case "multiply":afterClick(".multiply"), multiply();break;
+                    case "divide": afterClick(".divide"),divide();break;
                 }
             }
         }
