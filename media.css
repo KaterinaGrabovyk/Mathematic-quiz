@@ -1,0 +1,179 @@
+
+@media(min-width:717px) and (max-width:992px){
+    h1{
+
+        font-size: 4rem;
+    }
+    button{
+        font-size: 1.5rem;
+    }
+   
+    div.about{
+        height: 320px;
+    }
+    .about h1{
+        font-size: 2rem;
+    }
+    
+    ul{
+        font-size: 1.3rem;
+     }
+
+    h3{
+        font-size: 3.6rem;
+    }
+    input{
+        width: 90px;
+        font-size: 2.5rem;
+    }
+    .excample p{
+    font-size: 3rem;
+    }
+     .excample button{
+        height: 80px;
+        width: 100px;
+        font-size: 3rem;
+     }
+     .done h1{
+        font-size: 4rem;
+     }
+     .done div p{
+        font-size: 2rem;
+     }
+}
+@media(min-width:694px) and (max-width:717px){
+    h1{
+
+        font-size: 4rem;
+    }
+    button{
+        font-size: 1.5rem;
+    }
+    ul:last-of-type{
+        width: 50%;
+    }
+    div.about{
+        height: 320px;
+    }
+    .about h1{
+        font-size: 2rem;
+    }
+    
+    ul{
+        font-size: 1.2rem;
+     }
+
+    h3{
+        font-size: 3.6rem;
+    }
+    input{
+        width: 90px;
+        font-size: 2.5rem;
+    }
+    .excample p{
+    font-size: 3rem;
+    }
+     .excample button{
+        height: 80px;
+        width: 100px;
+        font-size: 3rem;
+     }
+     .done h1{
+        font-size: 4rem;
+     }
+     .done div p{
+        font-size: 2rem;
+     }
+}
+@media(min-width:536px) and (max-width:694px){
+    h1{
+
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 1.4rem;
+    }
+    button{
+        font-size: 1.1rem;
+    }
+    ul:last-of-type{
+        width: 50%;
+    }
+    div.about{
+        height: 320px;
+    }
+    .about h1{
+        font-size: 1.5rem;
+    } 
+    ul{
+        font-size: 1rem;
+     }
+
+
+    h3{
+        font-size: 3rem;
+    }
+    input{
+        width: 60px;
+        font-size: 2rem;
+    }
+    .excample p{
+    font-size: 2rem;
+    }
+     .excample button{
+        height: 60px;
+        width: 60px;
+        font-size: 2rem;
+     }
+     .done h1{
+        font-size: 3rem;
+     }
+     .done div p{
+        font-size: 1.5rem;
+     } 
+}
+@media(min-width:300px) and (max-width:536px){
+    h1{
+
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    button{
+        font-size: 0.8rem;
+    }
+    ul:last-of-type{
+        width: 50%;
+    }
+    div.about{
+        height: 400px;
+    }
+    .about h1{
+        font-size: 1.3rem;
+    } 
+    ul{
+        font-size: 0.9rem;
+     }
+    h3{
+        font-size: 2rem;
+    }
+    input{
+        width: 43px;
+        font-size: 1.5rem;
+    }
+    .excample p{
+    font-size: 1.5rem;
+    }
+     .excample button{
+        height: 60px;
+        width: 60px;
+        font-size: 1.5rem;
+     }
+     .done h1{
+        font-size: 2.5rem;
+     }
+     .done div p{
+        font-size: 1.5rem;
+     } 
+}

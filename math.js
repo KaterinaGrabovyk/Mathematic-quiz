@@ -37,8 +37,8 @@ function minus(){
 
 
 function multiply(){
-    var one=Math.floor(Math.random()*100)+1;
-    var two=Math.floor(Math.random()*20)+1;
+    var one=Math.floor(Math.random()*30)+1;
+    var two=Math.floor(Math.random()*30)+1;
     $(".multiply .excample>p").text(one+" * "+two+" = ");
     var res=one*two;
     $(".multiply input").click(function(){
@@ -54,8 +54,8 @@ function multiply(){
 
 
 function divide(){
-    var one=Math.floor(Math.random()*100)+1;
-    var two=Math.floor(Math.random()*100)+1;
+    var one=1;
+    var two=3;
     var res;
     while(one%two>=1){
      one=Math.floor(Math.random()*100)+1;
@@ -71,19 +71,21 @@ function divide(){
         var val=parseInt(document.getElementById("divid").value);
         var add=".divide ";
         var oper=" / ";
-        CalcRes(val,add,oper,one,two,res,divide);
+        console.log(val);
+        if(val!==""){
+        CalcRes(val,add,oper,one,two,res,divide);}
     })
 }
 
 function CalcRes(e, pl,op,one,two,res,funk){
     var hei = document.querySelector("div"+pl);
-    var a=one+op+two+" = "+res;
     if(e===res){
+       var a=one+op+two+" = "+res;
         console.log("right");
-        $(pl+".excample>h3").text("Congratulation!");
+        $(pl+".excample>h3").text("Right!");
         $(pl+".excample>h3").css("color","#cb7403");
         $(pl+".excample>p").text("");
-        $(pl+"input").addClass("textColAfter");
+        $(pl+".excample>input").addClass("textColAfter");
         $(pl+".excample>input").hide();
         $(pl+".excample>button").hide();
         setTimeout(function(){
@@ -93,7 +95,6 @@ function CalcRes(e, pl,op,one,two,res,funk){
             $(pl+".excample>h3").text("");
             height(hei);
                 funk();
-
         },3000);
         
     }else{
@@ -101,7 +102,7 @@ function CalcRes(e, pl,op,one,two,res,funk){
         $(pl+".excample>p").hide();
         $(pl+".excample>input").hide();
         $(pl+".excample>button").hide();
-        $(pl+".excample>h3").text("Wrong! Try again");
+        $(pl+".excample>h3").text("No,try again");
         $(pl+".excample>h3").css("color","red");
         setTimeout(function(){
             $(pl+".excample>p").show();

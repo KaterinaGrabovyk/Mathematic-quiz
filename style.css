@@ -17,15 +17,22 @@ h1{
     font-size: 5rem;
 }
 
+.all{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
 /*---------|Buttons|----------*/
 
 .buttons{
     justify-content: center;
-margin-top: 20px;
-display: flex;
+     display: flex;
+     width: 90%;
 }
 button{
-    width: 200px;
+    width: 20%;
     font-size: 2rem;
     border: none;
 }
@@ -49,6 +56,7 @@ color: #D5ED9F;
 /*---------|Excersises|----------*/
 
 .excercises{
+    width: 90%;
     background-color: #D5ED9F;
     position: relative; 
     display: flex;
@@ -56,7 +64,7 @@ color: #D5ED9F;
 }
 .excercises>div{
 padding-top: 30px;
-width: 1000px;
+width: 100%;
 background-color: #D5ED9F;
 position: absolute;
 gap: 10px;
@@ -67,7 +75,7 @@ border-radius: 0 0 0.5rem 0.5rem;
 }
 /*---------|About|----------*/
 div.about{
-    height: 400px;
+    height: 360px;
     background-color: #FF9100;
     display: flex;
     flex-wrap: wrap;
@@ -119,7 +127,6 @@ transition:  0.2s linear;
 }
 h3{
     font-size: 6rem;
-    margin-right: 4px;
 }
 input{
     font-style: italic;
@@ -131,7 +138,7 @@ input{
     border: none;
     background: rgba( 0, 0, 0, 0 );
     border-bottom: 4px dashed #00712D;
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     margin-right: 10px;
 }
 input::placeholder{
@@ -158,6 +165,7 @@ font-size: 3.5rem;
     font-size: 3.5rem;
     color: #00712D;
     background: rgba( 0, 0, 0, 0 );
+    
  }
  .excample button:hover{
     scale: 1.1;
@@ -174,3 +182,4 @@ font-size: 3.5rem;
     font-size: 3.5rem;
  }
 /*-------------------------------*/
+
