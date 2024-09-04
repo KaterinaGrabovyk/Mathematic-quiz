@@ -1,4 +1,9 @@
 
+@media(min-width:1505px){
+    ul{
+        width: 70%;
+    }
+}
 @media(min-width:717px) and (max-width:992px){
     h1{
 
